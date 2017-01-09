@@ -1,0 +1,23 @@
+{
+  "name": "VKAS",
+  "version": "1.4",
+  "manifest_version": 2,
+  "permissions": [
+  "storage"],
+  
+  "description": "VK feed filter",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [ "https://vk.com/feed" ],
+      "js": [ "jq.js", "back.js" ],
+	  "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "/main.js"
+  ],
+  "icons": { "16": "vk16.png",
+           "48": "vk32.png",
+          "128": "vk128.png" }
+}
